@@ -23,7 +23,8 @@ public class Board : MonoBehaviour
             for (int j = 0; j < height; j++)
             {
                 Vector2 tempPosition = new Vector2(i, j);
-                Instantiate(tilePrefab, tempPosition, Quaternion.identity);
+                GameObject tile = Instantiate(tilePrefab, tempPosition, Quaternion.identity, transform);
+                tile.name = "Tile(" + i + "," + j + ")";
             }
         }
     }
